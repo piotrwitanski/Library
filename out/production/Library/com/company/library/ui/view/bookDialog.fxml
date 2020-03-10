@@ -1,0 +1,18 @@
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<DialogPane fx:controller="com.company.library.ui.controller.BookDialogController"
+            xmlns:fx="http://javafx.com/fxml">
+    <headerText>
+
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="Title" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="titleTextField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>

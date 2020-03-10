@@ -1,0 +1,25 @@
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.text.Text?>
+<DialogPane fx:controller="com.company.library.ui.controller.AuthorDialogController"
+            xmlns:fx="http://javafx.com/fxml">
+    <headerText>
+
+    </headerText>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="First name" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="firstNameTextField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Last name" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+            <TextField fx:id="lastNameTextField" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+            <Label text="Nationality" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="nationalityTextField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+
+    </content>
+</DialogPane>

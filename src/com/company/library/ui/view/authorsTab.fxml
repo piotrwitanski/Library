@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.collections.FXCollections?>
+<BorderPane fx:id="authorsBorderPane" fx:controller="com.company.library.ui.controller.AuthorTabController"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <top>
+        <HBox>
+            <Button text="Add new author" onAction="#showNewAuthorDialog"/>
+            <Button text="Add new book" onAction="#showNewBookDialog"/>
+            <Button text="Edit" contentDisplay="TOP" onAction="#showEditAuthorDialog"/>
+            <Button text="Delete" contentDisplay="TOP" onAction="#showDeleteAuthorDialog"/>
+        </HBox>
+
+    </top>
+    <center>
+        <TableView fx:id="authorsTableView">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+            <columns>
+                <TableColumn text="First name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Last name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="Nationality">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nationality"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

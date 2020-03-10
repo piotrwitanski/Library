@@ -1,0 +1,32 @@
+.root {
+
+-fx-base: rgb(10, 41, 56);
+-fx-background: rgb(225, 228, 203);
+-fx-background-color: rgb(10, 41, 56)
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+
+}
+
+#login-text {
+   -fx-font-size: 32px;
+   -fx-fill: #ffffff;
+
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: rgb(8, 108, 158)
+}
+
+.tab:selected .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #000000;
+}
+
+

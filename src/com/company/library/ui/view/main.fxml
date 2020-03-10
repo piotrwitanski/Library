@@ -1,0 +1,53 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<?import java.net.URL?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane fx:id="mainBorderPane" fx:controller="com.company.library.ui.controller.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="Menu">
+                    <items>
+                        <MenuItem text="About program" onAction="#showAboutProgramDialog"/>
+                    </items>
+                    <items>
+                        <MenuItem text="Help" onAction="#showHelpDialog"/>
+                    </items>
+                </Menu>
+            </MenuBar>
+            <HBox alignment="CENTER_RIGHT">
+                <Button fx:id="logut" text="Logout" onAction="#logout"/>
+            </HBox>
+            <TabPane tabClosingPolicy="UNAVAILABLE" fx:id="tabPane">
+                <tabs>
+                    <Tab text="AUTHORS" fx:id="tabAuthors">
+                        <content>
+                            <fx:include source="authorsTab.fxml"/>
+                        </content>
+                    </Tab>
+
+                    <Tab text="BOOKS" fx:id="tabBooks">
+                        <content>
+                            <fx:include fx:id="books" source="booksTab.fxml"/>
+                        </content>
+                    </Tab>
+                </tabs>
+            </TabPane>
+        </VBox>
+    </top>
+    <stylesheets>
+        <URL value="@../Style.css"/>
+    </stylesheets>
+</BorderPane>
